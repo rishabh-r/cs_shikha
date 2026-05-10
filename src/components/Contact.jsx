@@ -60,17 +60,6 @@ export default function Contact() {
                 <p>cs-shikha-kumari</p>
               </div>
             </motion.a>
-
-            <motion.div
-              className="contact__detail-card"
-              whileHover={{ scale: 1.05, y: -3 }}
-            >
-              <span className="contact__detail-icon">📍</span>
-              <div>
-                <strong>Location</strong>
-                <p>Kolkata, West Bengal</p>
-              </div>
-            </motion.div>
           </div>
         </motion.div>
 
