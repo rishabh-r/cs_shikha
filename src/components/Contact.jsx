@@ -8,6 +8,9 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    const subject = `Portfolio Contact from ${formData.name}`
+    const body = `Name: ${formData.name}%0AEmail: ${formData.email}%0A%0A${formData.message}`
+    window.open(`mailto:shikha0702kumari@gmail.com?subject=${subject}&body=${body}`, '_self')
     setSubmitted(true)
     setTimeout(() => setSubmitted(false), 3000)
     setFormData({ name: '', email: '', message: '' })
@@ -44,30 +47,6 @@ export default function Contact() {
           </p>
 
           <div className="contact__details">
-            <motion.a
-              href="mailto:shikha0702kumari@gmail.com"
-              className="contact__detail-card"
-              whileHover={{ scale: 1.05, y: -3 }}
-            >
-              <span className="contact__detail-icon">📧</span>
-              <div>
-                <strong>Email</strong>
-                <p>shikha0702kumari@gmail.com</p>
-              </div>
-            </motion.a>
-
-            <motion.a
-              href="tel:+916206289442"
-              className="contact__detail-card"
-              whileHover={{ scale: 1.05, y: -3 }}
-            >
-              <span className="contact__detail-icon">📱</span>
-              <div>
-                <strong>Phone</strong>
-                <p>+91 6206289442</p>
-              </div>
-            </motion.a>
-
             <motion.a
               href="https://www.linkedin.com/in/cs-shikha-kumari-1a04931a4"
               target="_blank"
